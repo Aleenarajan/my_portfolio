@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section id="home" className="hero-section">
       <div className="hero-container">
-        <img src="/aleena.jpg" alt="Aleena" className="profile-pic" />
+<img src="/images/aleena.jpg" alt="Aleena Mariya Rajan" className="profile-pic" />
         <div className="hero-content">
           <h1>Hi, I'm <span className="highlight">Aleena Mariya Rajan</span></h1>
           <h2>Open To Work</h2>
