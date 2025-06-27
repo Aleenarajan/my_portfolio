@@ -1,11 +1,14 @@
+/* 🔷 Hero Section */
 .hero-section {
   display: flex;
   justify-content: center;
-  padding: 50px 20px;
+  padding: 100px 20px 50px; /* 🔁 Add top padding */
   background-color: #121212;
   color: white;
 }
 
+
+/* 🔹 Container */
 .hero-container {
   display: flex;
   flex-direction: column;
@@ -14,28 +17,27 @@
   max-width: 800px;
 }
 
-/* ✅ Make image a perfect glowing circle */
-.profile-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;        /* ✅ Makes it circular */
-  object-fit: cover;         /* ✅ Ensures it crops nicely */
-  border: 4px solid #00ffff; /* Optional glow border */
-  box-shadow: 0 0 12px cyan; /* Optional glowing shadow */
-  margin-bottom: 20px;
+/* 🔸 Profile Image (Circular & Styled) */
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid cyan;
+  box-shadow: 0 0 12px cyan;
+  margin-bottom: 15px;
 }
 
-
-
-/* ✅ Container for LinkedIn and Contact Me buttons */
+/* 🔹 Hero Buttons Container */
 .hero-buttons {
   margin-top: 20px;
   display: flex;
   justify-content: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
-/* ✅ Button style (LinkedIn) */
+/* 🔸 Button Styling */
 .btn {
   padding: 10px 20px;
   background-color: cyan;
@@ -52,20 +54,20 @@
   background-color: #00cccc;
 }
 
-/* ✅ Button style (Contact Me) */
+/* 🔸 Outline Button */
 .btn-secondary {
   background-color: transparent;
   border: 2px solid cyan;
   color: cyan;
 }
 
-/* ✅ Highlight your name in cyan */
+/* 💡 Highlighted Name */
 .highlight {
   color: cyan;
   font-weight: bold;
 }
 
-/* Optional: Smooth in-text transitions */
+/* 📋 Text Spacing */
 .hero-content h1,
 .hero-content h2,
 .hero-content h3,
