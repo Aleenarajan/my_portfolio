@@ -39,19 +39,45 @@
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
+    align-items: center;
+    padding: 20px;
   }
 
   .navbar-menu {
     flex-direction: column;
+    align-items: center; /* Center align the buttons */
+    justify-content: center;
     width: 100%;
-    padding-left: 0;
-    margin-top: 10px;
-    gap: 15px;
+    display: none;
+    gap: 12px;
+    margin-top: 20px;
   }
 
-  .navbar ul li a {
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .navbar-menu li {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center list item content */
+  }
+
+  .navbar-menu li a {
+    width: 90%;
     font-size: 16px;
+    padding: 10px 15px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-menu li a:hover {
+    background-color: rgba(0, 255, 255, 0.15);
+    color: #00ffff;
   }
 }
