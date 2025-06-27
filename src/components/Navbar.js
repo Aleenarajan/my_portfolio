@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Navbar.css';
+import './Navbar.css'; // Make sure this file exists
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,14 +14,10 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">Aleena</div>
-
-      {/* Hamburger Icon */}
       <div className="hamburger" onClick={handleToggle}>
         ☰
       </div>
 
-      {/* Sidebar Menu */}
       <div className={`sidebar ${isOpen ? 'active' : ''}`}>
         <span className="close-btn" onClick={closeMenu}>×</span>
         <ul>
