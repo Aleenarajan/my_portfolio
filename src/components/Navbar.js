@@ -1,29 +1,29 @@
 import React, { useState } from 'react';
-import '../styles/Navbar.css';
+import './Navbar.css'; // make sure path matches
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => setMenuOpen(!menuOpen);
-  const closeMenu = () => setMenuOpen(false);
+  const [open, setOpen] = useState(false);
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">Aleena</div>
+      <div className="logo">Aleena</div>
 
-      <div className="hamburger" onClick={toggleMenu}>
-        <div className="bar" />
-        <div className="bar" />
-        <div className="bar" />
+      {/* Hamburger */}
+      <div className="hamburger" onClick={() => setOpen(true)}>
+        ☰
       </div>
 
-      <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
-        <li onClick={closeMenu}><a href="#home">Home</a></li>
-        <li onClick={closeMenu}><a href="#about">About</a></li>
-        <li onClick={closeMenu}><a href="#skills">Skills</a></li>
-        <li onClick={closeMenu}><a href="#projects">Projects</a></li>
-        <li onClick={closeMenu}><a href="#contact">Contact</a></li>
-      </ul>
+      {/* Sidebar */}
+      <div className={`sidebar ${open ? 'show' : ''}`}>
+        <div className="close" onClick={() => setOpen(false)}>×</div>
+        <ul>
+          <li><a href="#home" onClick={() => setOpen(false)}>Home</a></li>
+          <li><a href="#about" onClick={() => setOpen(false)}>About</a></li>
+          <li><a href="#skills" onClick={() => setOpen(false)}>Skills</a></li>
+          <li><a href="#projects" onClick={() => setOpen(false)}>Projects</a></li>
+          <li><a href="#contact" onClick={() => setOpen(false)}>Contact</a></li>
+        </ul>
+      </div>
     </nav>
   );
 };
