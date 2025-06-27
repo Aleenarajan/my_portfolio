@@ -15,15 +15,16 @@
 }
 
 /* ✅ Make image a perfect glowing circle */
-.profile-pic {
-  width: 230px;
-  height: 230px;
+.profile-img {
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid cyan;
-  box-shadow: 0 0 15px cyan;
-  margin-bottom: 20px;
+  border: 4px solid #00ffff;
+  box-shadow: 0 0 20px #00ffff;
+  margin-top: 1rem;
 }
+
 
 /* ✅ Container for LinkedIn and Contact Me buttons */
 .hero-buttons {
