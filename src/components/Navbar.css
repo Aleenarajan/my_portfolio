@@ -1,92 +1,72 @@
-/* Main navbar styles */
 .navbar {
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  padding: 20px 30px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-/* Hamburger icon */
-.hamburger {
-  font-size: 30px;
-  color: #00ffff;
-  cursor: pointer;
-  display: none;
-}
-
-/* Slide-in menu */
-.nav-menu {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  height: 100vh;
-  width: 80%;
-  background: #fff;
-  list-style: none;
-  padding: 60px 20px;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  transition: left 0.3s ease;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  position: fixed;
+  width: 100%;
+  top: 0;
   z-index: 999;
 }
 
-.nav-menu.open {
-  left: 0;
-}
-
-.nav-menu li a {
-  padding: 12px 0;
-  color: #222;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 600;
-  border: none;
-  background: none;
-}
-
-
-.close-btn {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 30px;
-  color: #000;
+.hamburger {
+  display: none;
+  flex-direction: column;
   cursor: pointer;
 }
 
-/* Desktop styles */
-@media (min-width: 769px) {
-  .hamburger {
-    display: none;
-  }
-
-  .nav-menu {
-    position: static;
-    flex-direction: row;
-    height: auto;
-    width: auto;
-    background: none;
-    gap: 25px;
-    padding: 0;
-    display: flex;
-    box-shadow: none;
-  }
-
-  .nav-menu li a {
-    color: #fff;
-    font-size: 18px;
-  }
-
-  .close-btn {
-    display: none;
-  }
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: cyan;
+  margin: 4px 0;
+  transition: 0.4s;
 }
 
+/* Desktop menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* Mobile menu */
 @media (max-width: 768px) {
   .hamburger {
-    display: block;
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 60%;
+    background-color: white;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 30px;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  .nav-links li a {
+    color: #111;
+    font-size: 20px;
   }
 }
