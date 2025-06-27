@@ -6,11 +6,21 @@
 }
 
 .contact-section a {
-  color: cyan;
+  color: rgb(28, 128, 227);
   text-decoration: none;
   font-weight: bold;
 }
 
 .contact-section a:hover {
   text-decoration: underline;
+}
+
+.about-section {
+  background-color: #604d7e;
+  color: #f1e6fa;
+}
+
+.contact-section {
+  background-color: #624669;
+  color: #f2f2f2;
 }

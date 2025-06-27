@@ -1,42 +1,76 @@
-/* styles/Projects.css */
-
 .projects-section {
-  padding: 60px 20px;
-  background-color: #191919;
+  background-color: #1f1f2e;
   color: white;
   text-align: center;
+  padding: 60px 20px;
 }
 
 .projects-section h2 {
   color: cyan;
   margin-bottom: 30px;
-  font-size: 2.5rem;
+  font-size: 40px;
 }
 
-.projects-grid {
+.project-cards {
   display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  max-width: 1000px;
-  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center; /* ✅ This centers each box in its grid cell */
+  align-items: start;
 }
+
 
 .project-card {
-  background-color: #1f1f1f;
-  border: 2px solid cyan;
-  padding: 20px;
-  border-radius: 12px;
+  width: 300px;
+  height: 360px; /* ✅ Reduced height */
+  background-color: #2a2a3b;
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: left;
-  transition: transform 0.3s ease;
+  color: white;
+  overflow: hidden;
 }
+
 
 .project-card:hover {
   transform: translateY(-5px);
-  background-color: #00cccc;
-  color: black;
 }
 
 .project-card h3 {
-  color: cyan;
+  color: #66ffff;
+  font-size: 18px;
   margin-bottom: 10px;
+  text-align: center;
+}
+
+.project-card p {
+  font-size: 18px;
+  color: #ccc;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  overflow-y: auto; /* ✅ Makes paragraph scroll if too long */
+  max-height: 170px;
+  padding-right: 5px;
+}
+
+.github-btn {
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.github-btn:hover {
+  background-color: #00ffff;
+  color: black;
 }

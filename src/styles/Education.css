@@ -1,37 +1,54 @@
-/* styles/Education.css */
-
 .education-section {
-  padding: 60px 20px;
-  background-color: #191919;
+  background-color: #1e1e2f;
   color: white;
+  padding: 60px 20px;
   text-align: center;
 }
 
 .education-section h2 {
+  font-size: 32px;
   color: cyan;
-  margin-bottom: 30px;
-  font-size: 2.5rem;
+  margin-bottom: 40px;
 }
 
-.education-item {
-  margin-bottom: 30px;
-  background-color: #1f1f1f;
-  border: 2px solid cyan;
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  align-items: start;
+  padding: 0 10px;
+}
+
+.timeline-item {
+  background-color: #2a2a3b;
+  border: 2px solid rgba(0, 255, 255, 0.2);
+  border-radius: 16px;
   padding: 20px;
-  border-radius: 12px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+  text-align: left;
   transition: transform 0.3s ease;
 }
 
-.education-item:hover {
-  transform: scale(1.02);
-  background-color: #00cccc;
-  color: black;
+.timeline-item:hover {
+  transform: translateY(-6px);
 }
 
-.education-item h3 {
-  color: cyan;
+.timeline-item h3 {
+  font-size: 18px;
+  color: #66ffff;
+  margin-bottom: 10px;
+}
+
+.timeline-item p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.icon {
+  font-size: 24px;
+  color: #00ffff;
   margin-bottom: 10px;
 }

@@ -17,3 +17,12 @@
   font-size: 18px;
   line-height: 1.6;
 }
+.about-section {
+  background-color: #1a0033;
+  color: #e6e6fa;
+}
+
+.contact-section {
+  background-color: #7a5b99;
+  color: #f2f2f2;
+}

@@ -1,23 +1,57 @@
+/* Main navbar layout */
 .navbar {
   background-color: #1c1c1c;
   display: flex;
   justify-content: space-between;
   padding: 20px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-.navbar ul {
+/* Brand/logo name */
+.navbar-logo {
+  color: cyan;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Menu list layout */
+.navbar-menu {
   display: flex;
   list-style: none;
   gap: 25px;
 }
 
+/* Menu item links */
 .navbar ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .navbar ul li a:hover {
   color: cyan;
+}
+
+/* ✅ Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+    margin-top: 10px;
+    gap: 15px;
+  }
+
+  .navbar ul li a {
+    font-size: 16px;
+  }
 }
