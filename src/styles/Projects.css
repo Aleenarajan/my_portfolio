@@ -1,0 +1,42 @@
+/* styles/Projects.css */
+
+.projects-section {
+  padding: 60px 20px;
+  background-color: #191919;
+  color: white;
+  text-align: center;
+}
+
+.projects-section h2 {
+  color: cyan;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1000px;
+  margin: auto;
+}
+
+.project-card {
+  background-color: #1f1f1f;
+  border: 2px solid cyan;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  background-color: #00cccc;
+  color: black;
+}
+
+.project-card h3 {
+  color: cyan;
+  margin-bottom: 10px;
+}

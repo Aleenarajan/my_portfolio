@@ -1,0 +1,19 @@
+/* styles/About.css */
+.about-section {
+  padding: 60px 20px;
+  background-color: #191919;
+  color: rgb(228, 223, 237);
+  text-align: center;
+}
+
+.about-section h2 {
+  color: cyan;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  max-width: 700px;
+  margin: 10px auto;
+  font-size: 18px;
+  line-height: 1.6;
+}

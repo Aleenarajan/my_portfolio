@@ -1,0 +1,37 @@
+/* styles/Education.css */
+
+.education-section {
+  padding: 60px 20px;
+  background-color: #191919;
+  color: white;
+  text-align: center;
+}
+
+.education-section h2 {
+  color: cyan;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.education-item {
+  margin-bottom: 30px;
+  background-color: #1f1f1f;
+  border: 2px solid cyan;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease;
+}
+
+.education-item:hover {
+  transform: scale(1.02);
+  background-color: #00cccc;
+  color: black;
+}
+
+.education-item h3 {
+  color: cyan;
+  margin-bottom: 10px;
+}
