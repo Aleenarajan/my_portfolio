@@ -3,18 +3,18 @@ import React, { useState } from 'react';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <nav className="navbar">
-
       <div className="hamburger" onClick={toggleMenu}>
         ☰
       </div>
 
-      <ul className={`navbar-menu ${menuOpen ? 'open' : ''}`}>
+      <ul className={`nav-menu ${isOpen ? 'open' : ''}`}>
+        <span className="close-btn" onClick={toggleMenu}>×</span>
         <li><a href="#home" onClick={toggleMenu}>Home</a></li>
         <li><a href="#about" onClick={toggleMenu}>About</a></li>
         <li><a href="#skills" onClick={toggleMenu}>Skills</a></li>
